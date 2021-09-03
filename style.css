@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #beb97e;
+    font-family: 'Fira Sans', sans-serif;
+}
+/* Main Styles  */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+    width: 50%;
+    height: 90vh;
+    background-color: #DDD101;
+    border-radius: 0.5em;
+}
+input,label{
+    padding: 0.3em 0.4em;
+    width: 75%;
+    text-align: center;
+    font-size: 1.15rem;
+}
+button{
+    margin: 0.3em auto;
+    width: 50%;
+    height: 2.5em;
+    border-radius: 0.2em;
+    font-size: 1.1rem;
+}
+input{
+    background-color: #efecc3;
+    border-radius: 0.35em;
+}
+#show-text{
+    margin: 1em auto;
+    font-size: 1.4rem;
+}
+#check-btn:hover{
+    background-color: #85ed8b;
+}
+#reset-btn:hover{
+    background-color: #eba3a3;
+}
+
+/* Media queries for smaller devises */
+@media screen and (max-width:670px){
+    #container{
+        width: 65%;
+    }
+}
+@media screen and (max-width:530px){
+    #container{
+        width: 80%;
+    }
+}
+@media screen and (max-width:425px){
+    #container{
+        width: 90%;
+    }
+}
