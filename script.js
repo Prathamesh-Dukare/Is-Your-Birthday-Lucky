@@ -7,20 +7,27 @@ let resetButton = document.querySelector("#reset-btn");
 
 // Handler Functions
 checkButton.addEventListener('click', function clickCheckHandler() {
-    if (DOB.value != "" && luckyNumber.value != "") {
-        let finalSum = calculateSum(DOB.value);
-        let isLucky = calculateLuck(finalSum);
-        // console.log(isLucky)
-        outputDiv.style.color = "black";
-        if (isLucky) {
-            outputDiv.innerText = "Wow, Your Birthday is Lucky🎉"
-        } else {
-            outputDiv.innerText = "Sorry! Your Birthday is Not Lucky👀"
+    if(luckyNumber.value>0){
+        if (DOB.value != "" && luckyNumber.value != "") {
+            let finalSum = calculateSum(DOB.value);
+            let isLucky = calculateLuck(finalSum);
+            // console.log(isLucky)
+            outputDiv.style.color = "black";
+            if (isLucky) {
+                outputDiv.innerText = "Wow, Your Birthday is Lucky🎉"
+            } else {
+                outputDiv.innerText = "Sorry! Your Birthday is Not Lucky👀"
+            }
+        }else{
+            outputDiv.innerText = "Please Enter Both Fields!"
+            outputDiv.style.color = "red";
         }
-    }else{
-        outputDiv.innerText = "Please Enter Both Fields!"
+    }
+    else{
+        outputDiv.innerText = "Please Enter Positive Number!"
         outputDiv.style.color = "red";
     }
+    
 
 })
 
